@@ -1,0 +1,7 @@
+<app-header [qtdPedidos]="qtdPedidos"></app-header>
+<div class="container" style="margin-left: 200px; margin-top: 20px;">
+  <div class="card" *ngFor="let prato of pratos" style="color: white;">
+    {{prato.nome}}
+    {{prato.qtd}}
+  </div>
+</div>

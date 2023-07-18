@@ -1,0 +1,104 @@
+@import './../../../utils/scss/colors.scss';
+@import './../../../styles.scss';
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content-left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Popins', sans-serif;
+  color: $light-100;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.card {
+  background-color: $dark-700;
+  border-radius: 16px;
+  width: 30vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  margin-top: 32px;
+  color: $light-100;
+
+  input {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 16px 14px;
+    border: 1px solid $light-100;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: $light-500;
+  }
+
+  label {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .senha {
+    margin-top: 32px;
+  }
+
+  button {
+    margin-top: 32px;
+    background-color: $tomato-100;
+    color: $light-100;
+    padding: 12px 0;
+    border: none;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Popins', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  button:hover {
+    background-color: $tomato-200;
+  }
+}
+
+a{
+  margin-top: 32px;
+  font-size: 16px;
+  font-family: 'Popins', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  color: $light-100;
+  text-decoration: none;
+}

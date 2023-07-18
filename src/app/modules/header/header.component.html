@@ -1,0 +1,13 @@
+<header>
+  <img [src]="logo" alt="Logo" (click)="home()">
+  <div class="icon-input">
+    <img src="./../../../assets/icons/search.svg" alt="icon">
+    <input type="text" placeholder="Busque por pratos ou ingredientes">
+  </div>
+  <button (click)="irParaPedidos()">
+    <img src="./../../../assets/icons/Receipt.svg" alt="Receipt">
+    <p *ngIf="typeAdmin">Novo Pedido</p>
+    <p *ngIf="!typeAdmin">Pedidos ({{qtdPedidos}})</p>
+  </button>
+  <img src="./../../../assets/icons/SignOut.svg" alt="SignOut">
+</header>

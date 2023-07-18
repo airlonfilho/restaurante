@@ -1,0 +1,51 @@
+@import './../../../utils/scss/colors.scss';
+
+header {
+  height: 104px;
+  background-color: $dark-600;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  .icon-input img {
+    position: absolute;
+    padding-top: 12px;
+    padding-left: 24px;
+  }
+
+  input {
+    width: 381px;
+    background-color: $dark-900;
+    color: $light-500;
+    border-radius: 5px;
+    padding: 16px 64px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+
+  button{
+    background-color: $tomato-100;
+    color: $light-100;
+    padding: 12px 0;
+    border: none;
+    width: 216px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Popins', sans-serif;
+    font-weight: 400;
+
+    img {
+      width: 32px;
+    }
+  }
+
+}
