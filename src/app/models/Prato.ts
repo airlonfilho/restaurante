@@ -6,6 +6,7 @@ export class Prato{
   preco!: number;
   ingredientes!: Ingrediente[];
   qtd?: number;
+  img?: string;
 }
 
 export class Ingrediente {

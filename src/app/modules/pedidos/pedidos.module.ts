@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PedidosComponent } from './pedidos.component';
 import { HeaderModule } from '../header/header.module';
+import { QRCodeModule } from 'angularx-qrcode';
+
 
 @NgModule({
   declarations: [
@@ -9,7 +11,8 @@ import { HeaderModule } from '../header/header.module';
   ],
   imports: [
     CommonModule,
-    HeaderModule
+    HeaderModule,
+    QRCodeModule
   ]
 })
 export class PedidosModule { }

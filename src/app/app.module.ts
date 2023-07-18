@@ -22,7 +22,8 @@ import { PedidosModule } from './modules/pedidos/pedidos.module';
     SigninModule,
     HomeModule,
     PedidosModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [AppStateService, PratosService],
   schemas: [

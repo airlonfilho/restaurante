@@ -1,0 +1,85 @@
+@import './../../../utils/scss/colors.scss';
+.container {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 27px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 19vw;
+  gap: 15px;
+  background-color: $dark-200;
+  padding: 24px;
+  border-radius: 5px;
+
+  .descricao {
+    height: 55px;
+    display: flex;
+    align-items: center;
+  }
+
+  h4 {
+    font-family: 'Poppins', sans-serif;
+    color: $light-100;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  h5, p {
+    font-family: 'Roboto', sans-serif;
+    color: $light-100;
+  }
+
+  h5 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 160%;
+    color: $cake-200;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
+
+.contador {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
+  .addPedido {
+    background-color: $tomato-100;
+    color: $light-100;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-left: 2px;
+  }
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  .qtd {
+    font-size: 20px;
+  }
+}

@@ -1,14 +1,22 @@
 <app-header [qtdPedidos]="qtdPedidos"></app-header>
 
-<div class="container" style="margin-left: 200px; margin-top: 20px;">
-  <div class="card" *ngFor="let prato of pratos" style="color: white;">
-    <img src="./../../../assets/pratos/image 1.svg" alt="prato.nome">
-    <p>{{prato.nome}}</p>
-    <p>{{prato.preco}}</p>
-    <button (click)="alterarQuantidade('remove', prato.id)">-</button>
-    <button (click)="alterarQuantidade('add', prato.id)">+</button>
-    <p>{{prato.qtd}}</p>
-    <button (click)="addPedido(prato)">Add Pedido</button>
+<div class="container">
+  <div class="cards">
+    <div class="card" *ngFor="let prato of pratos" style="color: white;">
+      <img [src]="prato.img" [alt]="prato.nome" width="180px">
+      <h4>{{prato.nome}}</h4>
+      <p class="descricao">{{prato.descricao}}</p>
+      <h5>{{prato.preco | currency:'BRL' }}</h5>
+      <div class="contador">
+        <div class="count">
+          <img (click)="alterarQuantidade('remove', prato.id)" src="./../../../assets/icons/Minus.svg" alt="Menos">
+          <p class="qtd">{{prato.qtd}}</p>
+          <img (click)="alterarQuantidade('add', prato.id)" src="./../../../assets/icons/Plus.svg" alt="Mais">
+        </div>
+        <button (click)="addPedido(prato)" class="addPedido">incluir</button>
+      </div>
+
+    </div>
   </div>
 
 </div>

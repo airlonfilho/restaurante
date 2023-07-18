@@ -1,7 +1,53 @@
 <app-header [qtdPedidos]="qtdPedidos"></app-header>
-<div class="container" style="margin-left: 200px; margin-top: 20px;">
-  <div class="card" *ngFor="let prato of pratos" style="color: white;">
-    {{prato.nome}}
-    {{prato.qtd}}
+<div class="container">
+
+  <div class="left">
+    <h2>Meu pedido</h2>
+
+    <p class="message" *ngIf="showMessage">
+      Adicione itens ao seu carrinho
+    </p>
+    <div *ngIf="!showMessage" class="cards" style="color: white;">
+      <div class="card" *ngFor="let prato of pratos">
+        <img [src]="prato.img" [alt]="prato.nome" width="80px">
+
+        <h4>{{prato.qtd}}x {{prato.nome}}</h4>
+        <h5>{{prato.preco | currency:'BRL' }}</h5>
+      </div>
+
+      <div class="total">
+        <h4>Total: {{total | currency:'BRL'}}</h4>
+        <button class="continuar" (click)="showPag()">Continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showPagamento" class="rigth">
+    <h2>Pagamento</h2>
+
+    <div class="card-pagamento">
+      <div class="botoes">
+        <div class="pix" id="pix" (click)="pix()">
+          <button>
+            <img src="./../../../assets/icons/PIX.svg" alt="PIX">
+            Pix
+          </button>
+        </div>
+        <div class="credito" id="credito" (click)="credito()">
+          <button>
+            <img src="./../../../assets/icons/CreditCard.svg" alt="CreditCard">
+            Crédito
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <p style="color: white;" *ngIf="showPix">
+          <qrcode [qrdata]="'https://www.bcb.gov.br/estabilidadefinanceira/pix'" [allowEmptyString]="true"
+            [colorDark]="'#000000'" [colorLight]="'#ffffff'" [elementType]="'svg'" [errorCorrectionLevel]="'M'"
+            [scale]="1" [width]="300"></qrcode>
+        </p>
+        <p style="color: white;" *ngIf="!showPix">Cartão</p>
+      </div>
+    </div>
   </div>
 </div>
