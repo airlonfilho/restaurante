@@ -1,0 +1,65 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "nome": "Airlon Filho",
+      "email": "airlonfilho@gmail.com",
+      "senha": "abc123",
+      "tipo": "usuario"
+    },
+    {
+      "id": 2,
+      "nome": "Airlon Filho",
+      "email": "filhoairlon@gmail.com",
+      "senha": "abc123",
+      "tipo": "admin"
+    }
+  ],
+  "prato": [
+    {
+      "id": 1,
+      "nome": "Salada Ravanello",
+      "tipo": "Refeição",
+      "descricao": "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.",
+      "preco": 25.00,
+      "ingredientes": [
+        "Alface",
+        "Cebola",
+        "Pão",
+        "Pepino",
+        "Rabanete",
+        "Tomate"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Suco de Maracujá",
+      "tipo": "Bebida",
+      "descricao": "Suco de maracujá gelado, cremoso, docinho.",
+      "preco": 6.00,
+      "ingredientes": [
+        "Maracujá",
+        "Gelo",
+        "Água"
+      ]
+    }
+  ],
+  "pedido": [
+    {
+      "id": 10000,
+      "status": "Pendente",
+      "produtos": [
+        {
+          "qtd": 2,
+          "produto": "Salada Ravanello"
+        },
+        {
+          "qtd": 1,
+          "produto": "Suco de maracujá"
+        }
+      ],
+      "valor": 63.97,
+      "data": "17 July 2023 14:51:15 GMT-03:00"
+    }
+  ]
+}
