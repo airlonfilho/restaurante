@@ -2,6 +2,7 @@
 
 <div class="container" style="margin-left: 200px; margin-top: 20px;">
   <div class="card" *ngFor="let prato of pratos" style="color: white;">
+    <img src="./../../../assets/pratos/image 1.svg" alt="prato.nome">
     <p>{{prato.nome}}</p>
     <p>{{prato.preco}}</p>
     <button (click)="alterarQuantidade('remove', prato.id)">-</button>
